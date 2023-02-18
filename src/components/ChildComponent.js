@@ -4,8 +4,7 @@ const ChildComponent = () => {
 //code here
   return (
     <div id="child">
-      Find The Square <br/>
-     
+      Find The Square <br/> 
     </div>
   )
 }
