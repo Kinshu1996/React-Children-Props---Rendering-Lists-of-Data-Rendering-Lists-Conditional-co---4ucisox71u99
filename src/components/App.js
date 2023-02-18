@@ -7,11 +7,10 @@ const App = () => {
  const updateNumber = (e) => {
   let num = e.target.value && parseInt(e.target.value, 10) > 0 ? parseInt(e.target.value,10) : 0;
   setNumber(num);
- }
-
+ } 
   return (
     <div id="main">
-      <ChildComponent /> 
+      <ChildComponent child={number}/> 
        <input id='input' onChange={updateNumber} />
     
       <p id='output'>{number * number}</p>
