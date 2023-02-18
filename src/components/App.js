@@ -3,17 +3,21 @@ import '../styles/App.css';
 import ChildComponent from './ChildComponent';
 const App = () => {
  //code here
- const[number,setNumber] = useState(0);
- const updateNumber = (e) => {
-  let num = e.target.value && parseInt(e.target.value, 10) > 0 ? parseInt(e.target.value,10) : 0;
-  setNumber(num);
+ function updateNumber(e) {
+  const val = document.getElementById('input').value;
+  let vrbl = 0;
+  if(val != ''){
+    vrbl = parseInt(val)*parseInt(val);
+  }
+  document.getElementById('output').textContent=vrbl;
  } 
   return (
     <div id="main">
-      <ChildComponent child={number}/> 
+      <ChildComponent > 
        <input id='input' onChange={updateNumber} />
+       </ChildComponent>
     
-      <p id='output'>{number * number}</p>
+      <p id='output'>{'0'}</p>
     </div>
   )
 }
